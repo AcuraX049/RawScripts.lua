@@ -1,0 +1,13 @@
+function(args, speaker)
+	if brightLoop then
+		brightLoop:Disconnect()
+	end
+	local function brightFunc()
+		game:GetService("Lighting").Brightness = 2
+		game:GetService("Lighting").ClockTime = 14
+		game:GetService("Lighting").FogEnd = 100000
+		game:GetService("Lighting").GlobalShadows = false
+		game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+	end
+
+	brightLoop = game:GetService("RunService").RenderStepped:Connect(brightFunc)
