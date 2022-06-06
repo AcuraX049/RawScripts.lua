@@ -3,12 +3,6 @@ tool = Instance.new("Tool")
 tool.RequiresHandle = false
 tool.Name = ("Equip To Noclip")
 tool.Activated:Connect(function()
-game.Players.LocalPlayer.Character.Humanoid.MaxHealth = math.huge
-game.Players.LocalPlayer.Character.Humanoid.Health = math.huge
-while true do
-		game:GetService("RunService").Stepped:wait()
-		game.Players.LocalPlayer.Character.Head.CanCollide = false
-		game.Players.LocalPlayer.Character.Torso.CanCollide = false
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AcuraX049/RawScripts.lua/main/NoClip", true))()
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
