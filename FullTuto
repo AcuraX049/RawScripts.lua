@@ -1,0 +1,20 @@
+local function callback(Text)
+ if Text == "Giant" then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/AcuraX049/RawScripts.lua/main/GiantTuto"))()
+elseif Text == ("Dwarf") then
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/AcuraX049/RawScripts.lua/main/DwarfTuto"))()
+ end
+end
+
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+--
+game.StarterGui:SetCore("SendNotification",  {
+ Title = "Which Tutorial";
+ Text = "Choose";
+ Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150";
+ Duration = 10;
+ Button1 = "Giant";
+ Button2 = "Dwarf";
+ Callback = NotificationBindable;
+})
