@@ -1,5 +1,4 @@
-function(args, speaker)
-	if brightLoop then
+if brightLoop then
 		brightLoop:Disconnect()
 	end
 	local function brightFunc()
@@ -11,3 +10,9 @@ function(args, speaker)
 	end
 
 	brightLoop = game:GetService("RunService").RenderStepped:Connect(brightFunc)
+end)
+
+addcmd('unloopfullbright',{'unloopfb'},function(args, speaker)
+	if brightLoop then
+		brightLoop:Disconnect()
+	end
