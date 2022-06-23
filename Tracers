@@ -207,7 +207,7 @@ if _G.DefaultSettings == true then
     _G.FromMouse = false
     _G.FromCenter = false
     _G.FromBottom = true
-    _G.TracersVisible = false
+    _G.TracersVisible = true
     _G.TracerColor = Color3.fromRGB(40, 90, 255)
     _G.TracerThickness = 1
     _G.TracerTransparency = 0.5
