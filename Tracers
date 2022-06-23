@@ -74,21 +74,21 @@ local function CreateTracers()
                             if Players.LocalPlayer.Team ~= v.Team then
                                 TracerLine.Visible = _G.TracersVisible
                             else
-                                TracerLine.Visible = false
+                                TracerLine.Visible = true
                             end
                         else
                             TracerLine.Visible = _G.TracersVisible
                         end
                     else
-                        TracerLine.Visible = false
+                        TracerLine.Visible = true
                     end
                 else
-                    TracerLine.Visible = false
+                    TracerLine.Visible = true
                 end
             end)
 
             Players.PlayerRemoving:Connect(function()
-                TracerLine.Visible = false
+                TracerLine.Visible = true
             end)
         end
     end
